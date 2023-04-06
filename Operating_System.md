@@ -18,4 +18,19 @@ The main reason paging is needed is to allow programs to use more memory than is
 
 - Then we need to know about frames. Our main memory or disk storage is divided into frames. Each frame size is equal to each page size. Because we've to store a single page in a single frame. Suppose, our page 1 for process P1 is sotred at frame no.2 and page 2 for process p1 is stored at frame no.3. 
 
-![](../asst/images.image010.png)
+- '0' in page_0 &rArr; '4' in frame_2 
+- '1' in page_0 &rArr; '5' in frame_2
+- '2' in page_1 &rArr; '8' in frame_4
+- '3' in page_1 &rArr; '9' in frame_4
+
+
+![](../asset/images/image010.png)
+
+
+- Now we know CPU generates a logical address and frame in main memory works at physical address. So How these Connect? The answer is simple page table which is managed by memory management unit. A page table for a process refers to which page is stored in which frame. Suppose first record of page table for process P1 is frame_2 because page_0 of process P1 is stored in frame_2.
+- CPU generates logical adress. How it looks like ? It contains 2 parts. 1st one refers to page number and 2nd one refers to page offset. For above example, if CPU wants to locate 3rd Byte of process P1 it will generate the logical address '<b>11</b>'
+- Then it will refer to page table for process P1 and search for 1st part of logical adress which indicates the page number and frame number. In physical address same as logical adress 1st part refers to frame number in physical memory and 2nd part is same as plogical address since frame offset and page offset is same. 
+- For above example, we'll get '<b>1001</b>' as physical address. Because page_1 is stored at frame_4 which is indicated by '<b>100</b>' and page offset is '<b>1</b>'. Now we can say '<b>1001</b>' &rArr; '<b>9</b>' So. 3rd Byte of process P1 is stored at 9th Byte of memory. Hope, you understand the whole process. For better understanding look at this picture.
+
+
+![](../asset/images/image011.png)
