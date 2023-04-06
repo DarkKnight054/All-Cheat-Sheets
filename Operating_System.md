@@ -9,6 +9,15 @@ The main reason paging is needed is to allow programs to use more memory than is
 <br/>
 ![](../asset/images/image007.jpg)
 
+#### What is virtual memory
+
+Virtual memory is a memory management technique used by operating systems to allow a computer to compensate for shortages of physical memory (RAM) by temporarily transferring data from the RAM to disk storage.
+
+Virtual memory works by creating a <b>virtual address space</b> that is larger than the available physical memory. When a program does not need data that is currently in the RAM, the operating system moves data from the RAM to a temporary file on disk, freeing up space in the RAM for other programs or data. This process is known as swapping or paging. When the program needs the data again, the operating system swaps it back into the RAM.
+
+## __In this article, main memory refers to RAM__
+
+
 <b>Let's dive into the concepts</b>
 - Processes are dividing into pages and each page contain specific bytes of that process. Suppose, we've a process P1. and our page size is 2 Bytes whereas size of P1 is 4 Bytes. So, we'll need 4/2 or 2 page to store process P1. For better view look at this:
 
