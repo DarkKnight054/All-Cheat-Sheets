@@ -13,4 +13,9 @@ The main reason paging is needed is to allow programs to use more memory than is
 - Processes are dividing into pages and each page contain specific bytes of that process. Suppose, we've a process P1. and our page size is 2 Bytes whereas size of P1 is 4 Bytes. So, we'll need 4/2 or 2 page to store process P1. For better view look at this:
 
 
-![](../asset/images/image008.png)
+![](../asset/images/image009.png)
+
+
+- Then we need to know about frames. Our main memory or disk storage is divided into frames. Each frame size is equal to each page size. Because we've to store a single page in a single frame. Suppose, our page 1 for process P1 is sotred at frame no.2 and page 2 for process p1 is stored at frame no.3. 
+
+![](../asst/images.image010.png)
