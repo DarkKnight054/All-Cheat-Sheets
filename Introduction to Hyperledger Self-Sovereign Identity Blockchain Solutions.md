@@ -4,6 +4,10 @@ Hyperledger Indy, Aries, AnonCreds, and Ursa are a set of components that enable
 
 Indy, Aries, AnonCreds and Ursa are specifications, tools, and libraries that allow for the development of independent digital identities rooted on blockchains or other distributed ledgers.
 
+---
+
+## Chapter 2: Adding a layer of trust to the internet
+
 ### Verifiable Credentials:
 
 process of vc model:
@@ -11,6 +15,8 @@ process of vc model:
 1. issuer prepares for the issuance of credentials by publishing some cryptographic public keys and (as needed) other data about the credentials to be issued into the Verifiable Data Registry (VDR).
 2. issuer issues a credential to the holder.
 3. holder present credentials to the varifier. varifier check vdr for credential authenticity. issuer is not involved in this interaction.
+
+---
 
 ### Public and Private key:
 
@@ -20,6 +26,8 @@ summary - A holder will generate a presentation that will be checked by a verifi
 
 But how varifier trust issuer?
 
+---
+
 ### Claim and credentials:
 
 Claim to mean a data element within a credential, and a credential to be made up of a set of claims.
@@ -27,9 +35,13 @@ Claim to mean a data element within a credential, and a credential to be made up
 proving claim of the credential is more secured than proving whole credential to the varifier.
 vc is issued to holder and stored in holders digital wallet. holder decide when and where this credentials have to be used. this improves the privacy.
 
+---
+
 ### SSI:
 
 The Sovrin Foundation is a non-profit organization that operates the Sovrin Identity Network, a public, permissioned distributed ledger built for identity using Hyperledger Indy. Their mission is to create a global public utility for digital identity, providing a trust layer for people, organizations, and things. The foundation collaborates with leaders and thinkers in the self-sovereign identity community to establish foundational principles and governance documents.
+
+---
 
 ### Decentralized Identifiers:
 
@@ -43,11 +55,15 @@ A DID (and DIDDoc) on a blockchain can never be removed, so "deleting" a DID rea
 
 Proving control over identifiers like email and phone numbers can be insecure due to attacks on central authorities. DIDs, based on public/private keypairs, provide a more secure way to prove control. Verifiable credentials can prove the issuer's identity, usually through a published DID. Verifiers can either have a hard-coded list of trusted issuers or use a Trust Registry to look up the DID. Alternatively, they can retrieve the DIDDoc for the DID and use the service endpoint to connect to the issuer and ask for identity data. Trust is essential to determine if the received data can be trusted.
 
+---
+
 ### DIDs from a Business Perspective:
 
 Common identifiers used today often need to be reused, leading to privacy concerns. DIDs solve this problem by allowing users to create a unique DID for every service they connect to, resulting in multiple DIDs. Both sides of the relationship provide a DID to communicate with each other. Instead of creating a user ID and password, users can create and share a new DID with the site, and prove control over it when returning to the site. This eliminates the need for user IDs and passwords.
 
 diddoc contains public key and service endpoint. an entity can encrypt message by public key from receivers diddoc and send to the receivers service end point. receiver can decrypt the message by his private key. this enables secure communication.s
+
+---
 
 ### Types of DID: public and private
 
@@ -64,10 +80,14 @@ Secondly, in the case of verifiable credentials, DIDs are used as the identifier
 When a verifier receives a verifiable credential, they extract the issuer DID from the credential and use a DID resolver to retrieve the associated public key.
 The verifier can then use the public key to verify the digital signature on the verifiable credential. If the digital signature is valid, the verifier can trust that the credential was issued by the entity associated with the DID.
 
+---
+
 ### Agent and Wallets (Wallets are agent):
 
 Software that process VCs and DIDs and interacts with other entities. <br>
 All agents (with rare exceptions) have secure storage for holding identity-related data including DIDs, keys, and verifiable credentials.
+
+---
 
 ### Trust over ip (ToIP):
 
@@ -77,6 +97,8 @@ ToIP aims to create a trust framework that enables interoperability between vari
 Ultimately, the goal is to create a more decentralized, user-centric, and privacy-preserving digital identity ecosystem.
 
 image: https://learning.edx.org/course/course-v1:LinuxFoundationX+LFS172x+1T2023/block-v1:LinuxFoundationX+LFS172x+1T2023+type@sequential+block@b7e581eabc324c1ca632ab322efc54af/block-v1:LinuxFoundationX+LFS172x+1T2023+type@vertical+block@37faff9479494a6ca1dec647c1e6b469
+
+---
 
 ## Chapter 3:
 
@@ -93,6 +115,8 @@ Hyperledger Indy, Aries, AnonCreds, and Ursa are (awesome) implementations of th
 - The core of Aries is a set of protocol specifications to enable secure, DID-based messaging between agents (using DIDComm) and a set of higher level protocols for using that messaging to accomplish business goals, such as issuing, presenting, and verifying credentials.
 
 image: https://learning.edx.org/course/course-v1:LinuxFoundationX+LFS172x+1T2023/block-v1:LinuxFoundationX+LFS172x+1T2023+type@sequential+block@0afef42e63364f15aaa012a54d200712/block-v1:LinuxFoundationX+LFS172x+1T2023+type@vertical+block@b3ffae2d43514dec927769bfbac3db46
+
+---
 
 ### Relations between Hyperledger ursa, indy, aries, anoncreds:
 
