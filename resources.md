@@ -10,6 +10,6 @@ Blockchain and Bitcoin Fundamentals (George Levy): <a href="https://www.udemy.co
 
 Bitcoin book: <a href="https://github.com/bitcoinbook/bitcoinbook">link</a> <br>
 
-IIT bombay course: <a href=" https://www.youtube.com/playlist?list=PLfmqK5mMBWj9dEmo91RBJd3xHx4TQi8bA">link</a>
+IIT bombay course: <a href="https://www.youtube.com/playlist?list=PLfmqK5mMBWj9dEmo91RBJd3xHx4TQi8bA">link</a>
 
 Mit course: <a href="https://www.youtube.com/playlist?list=PLUl4u3cNGP63UUkfL0onkxF6MYgVa04Fn">link</a>
