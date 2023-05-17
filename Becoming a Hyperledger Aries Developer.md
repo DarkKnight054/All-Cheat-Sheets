@@ -242,3 +242,5 @@ universal did resolver: https://dev.uniresolver.io/#did:key:zDnaerDaTF5BXEavCrfR
 - A generic "registerDID" call is made that determines the type of DID to be registered and uses a plugin to actually create and publish the DID.
 
 - The interface and plugin for DID registration are more complicated compared to DID resolution because of the extra information needed for registration, which may be DID method specific.
+
+---
