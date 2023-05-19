@@ -1,0 +1,12 @@
+#root{
+  max-width: 1550px;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;  
+  justify-content: center;
+  background-image: url('./assets/app_background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
